@@ -54,7 +54,7 @@ class App extends React.Component{
     // console.log(this.state.inputData);
   }
   changeWeather =(envet) =>{
-    // envet.prevent
+    event.preventDefault();
     axios.get(`http://api.weatherstack.com/current?access_key=99c613127c68350788cb70877257a1be&query=${this.state.inputData}`).then((res)=>{
           let weatherData ={
             temperature: res.data.current.temperature,
